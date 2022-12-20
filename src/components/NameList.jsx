@@ -5,8 +5,9 @@ const NamesList = (props) => {
     console.log(props.names);
     return (
         <>
-            <div>NamesList</div>
-            {props.names.map(element => <Card name={element} />)}
+            <div>Names List</div>
+            {props.names.map((element, i) => <Card name={element} key={i} />)}
+            {/*siempre se debe poner un key unico*/}
         </>
     )
 }
